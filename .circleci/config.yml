@@ -172,10 +172,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      # Checkout code from git
       - checkout
       - install_awscli
-      
       - run:
           name: Ensure back-end infrastructure exists
           command: |
@@ -208,26 +206,28 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
-      # Here's where you will add some code to rollback on failure      
-#
-#  configure-infrastructure:
-#    docker:
-#      # Docker image here that supports Ansible
-#    steps:
-#      # Checkout code from git
-#      # Add ssh keys with fingerprint
-#      # attach workspace
-#      - run:
-#          name: Install dependencies
-#          command: |
-#            # Your code here
-#            exit 1
-#      - run:
-#          name: Configure server
-#          command: |
-#            # Your code here
-#            exit 1
-#      # Here's where you will add some code to rollback on failure      
+      - destroy-environment
+      # if rollback on failure      
+
+  configure-infrastructure:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - install_ansible
+      - add_ssh_keys:
+          fingerprint: ["75:23:b8:65:b4:8a:b5:67:99:1d:7f:68:75:65:cd:d9"]
+      - attach_workspace:
+          at: ~/
+      
+      - run:
+          name: Configure server
+          command: |
+            cd .circleci/ansible
+            cat inventory.txt
+            ansible-playbook -i inventory.txt configure-server.yml
+      - destroy-environment
+      # if rollback on failure      
 #
 #  run-migrations:
 #    docker:
@@ -244,7 +244,8 @@ jobs:
 #          command: |
 #            # Your code here
 #            exit 1
-#     # Here's where you will add some code to rollback on failure      
+#     - destroy-environment
+#       # if rollback on failure      
 #
 #  deploy-frontend:
 #    docker:
@@ -282,7 +283,8 @@ jobs:
 #          name: Deploy backend
 #          command: |
 #            # your code here
-#      # Here's where you will add some code to rollback on failure  
+#      - destroy-environment
+#       # if rollback on failure  
 #
 #  smoke-test:
 #    docker:
@@ -305,7 +307,8 @@ jobs:
 #          name: Frontend smoke test.
 #          command: |
 #            # your code here
-#      # Here's where you will add some code to rollback on failure  
+#      - destroy-environment
+#         # if rollback on failure  
 #
 #  cloudfront-update:
 #    docker:
@@ -320,7 +323,8 @@ jobs:
 #          name: Update cloudfront distribution
 #          command: |
 #            # your code here
-#      # Here's where you will add some code to rollback on failure  
+#      - destroy-environment
+#         # if rollback on failure  
 #
 #cleanup:
 #    docker:
@@ -361,8 +365,8 @@ workflows:
           filters:
             branches:
               only: [master]
-#      - configure-infrastructure:
-#          requires: [deploy-infrastructure]
+      - configure-infrastructure:
+          requires: [deploy-infrastructure]
 #      - run-migrations:
 #          requires: [configure-infrastructure]
 #      - deploy-frontend:
