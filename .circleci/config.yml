@@ -226,7 +226,7 @@ jobs:
             ansible-playbook -i inventory.txt configure-server.yml
       #- destroy-environment
       # if rollback on failure      
-#
+
 #  run-migrations:
 #    docker:
 #      # Docker image here that supports NodeJS
