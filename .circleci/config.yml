@@ -1,14 +1,14 @@
 version: 2.1
-orbs: 
-  slack: circleci/slack@4.10.1
+#orbs: 
+#  slack: circleci/slack@4.10.1
 
-commands:
-  notify_on_failure:
-    steps:
-      - slack/notify:
-          event: fail
-          channel: Circle-CI
-          template: basic_fail_1
+#commands:
+#  notify_on_failure:
+#    steps:
+#      - slack/notify:
+#          event: fail
+#          channel: Circle-CI
+#          template: basic_fail_1
 commands:
   install_awscli:
     description: Install AWS CLI v2
@@ -98,7 +98,7 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-build
-      - notify_on_failure
+      #- notify_on_failure
 
 
   test-frontend:
@@ -114,7 +114,7 @@ jobs:
             cd frontend
             npm install
             npm test
-      - notify_on_failure
+      #- notify_on_failure
                 
   test-backend:
     docker:
@@ -129,7 +129,7 @@ jobs:
             cd backend
             npm install
             npm test
-      - notify_on_failure
+      #- notify_on_failure
             
   scan-frontend:
     docker:
@@ -145,7 +145,7 @@ jobs:
             npm install
             npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
-      - notify_on_failure
+      #- notify_on_failure
 
       
   scan-backend:
@@ -163,7 +163,7 @@ jobs:
             npm audit fix --audit-level=critical --force
             npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
-      - notify_on_failure
+      #- notify_on_failure
 
 
   deploy-infrastructure:
@@ -204,7 +204,7 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
-      - destroy-environment
+      #- destroy-environment
       # if rollback on failure      
 
   configure-infrastructure:
@@ -224,7 +224,7 @@ jobs:
             cd .circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt configure-server.yml
-      - destroy-environment
+      #- destroy-environment
       # if rollback on failure      
 #
 #  run-migrations:
