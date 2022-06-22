@@ -215,7 +215,7 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
-      - destroy-environment
+      #- destroy-environment
       # if rollback on failure      
 
   configure-infrastructure:
