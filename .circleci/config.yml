@@ -361,7 +361,7 @@ jobs:
             fi
       - destroy-environment
       - revert-migrations
-      # if rollback on failure  
+      # if rollback on failure
 
   cloudfront-update:
     docker:
