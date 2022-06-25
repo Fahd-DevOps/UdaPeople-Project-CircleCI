@@ -21,6 +21,10 @@ Resources:
           FromPort: 3030
           ToPort: 3030
           CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 9100
+          ToPort: 9100
+          CidrIp: 0.0.0.0/0
 
   EC2Instance:
     Type: AWS::EC2::Instance
@@ -32,5 +36,7 @@ Resources:
       ImageId: ami-052efd3df9dad4825 
       Tags:
         - Key: Name
-          Value: !Sub backend-${ID}
+          Value: !Sub UdaPeople-backend-${ID}
+        - Key: Project
+          Value: UdaPeople
 
