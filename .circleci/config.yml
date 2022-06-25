@@ -325,7 +325,7 @@ jobs:
             ansible-playbook -i inventory.txt deploy-backend.yml
       - destroy-environment
       - revert-migrations
-      # if rollback on failure  
+      # if rollback on failure 
 
   smoke-test:
     docker:
