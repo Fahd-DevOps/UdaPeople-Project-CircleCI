@@ -155,7 +155,6 @@ jobs:
             npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
       - notify_on_failure
-
       
   scan-backend:
     docker:
@@ -174,7 +173,6 @@ jobs:
             npm audit --audit-level=critical
       - notify_on_failure
 
-
   deploy-infrastructure:
     docker:
       - image: cimg/base:stable
@@ -189,7 +187,7 @@ jobs:
               --tags project=UdaPeople \
               --stack-name "UdaPeople-backend-${CIRCLE_WORKFLOW_ID:0:7}" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  
-              
+        
       - run:
           name: Ensure front-end infrastructure exist
           command: |
@@ -314,15 +312,15 @@ jobs:
             cd ..
             tar -C backend -czvf artifact.tar.gz .
             cp artifact.tar.gz .circleci/ansible/roles/deploy/files
-      
+
             export TYPEORE_MIGRATIONS_DIR=./migrations
             export TYPEORM_ENTITIES=./modules/domain/**/*.entity{.ts,.js}
             export TYPEORM_MIGRATIONS=./migrations/*.ts
             cd .circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt deploy-backend.yml
-      - destroy-environment
-      - revert-migrations
+      #- destroy-environment
+      #- revert-migrations
       # if rollback on failure 
 
   smoke-test:
