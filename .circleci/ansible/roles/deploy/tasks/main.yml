@@ -5,8 +5,8 @@
 
 - name: "Copying compiled app"
   copy:
-    src: "artifact.tar.gz"
-    dest: "artifact.tar.gz"
+    src: artifact.tar.gz
+    dest: /home/ubuntu/backend
 
 - name: Extract artifact.tar.gz to EC2
   unarchive:
