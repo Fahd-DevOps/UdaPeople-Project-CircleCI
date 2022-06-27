@@ -349,7 +349,7 @@ jobs:
       - run:
           name: Frontend smoke test.
           command: |
-            FRONTEND_WEBSITE=http://UdaPeople-frontend${CIRCLE_WORKFLOW_ID:0:7}.s3-website-us-east-1.amazonaws.com/#/employees
+            FRONTEND_WEBSITE="http://UdaPeople-frontend${CIRCLE_WORKFLOW_ID:0:7}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/#/employees"
             echo "${FRONTEND_WEBSITE}"
             if curl -s $FRONTEND_WEBSITE | grep "welcome"
             then
@@ -357,8 +357,8 @@ jobs:
             else
               exit 1
             fi
-      - destroy-environment
-      - revert-migrations
+      #- destroy-environment
+      #- revert-migrations
       # if rollback on failure
 
   cloudfront-update:
