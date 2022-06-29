@@ -26,7 +26,7 @@ commands:
     steps:
       - slack/notify:
           event: fail
-          channel: Circle-CI
+          channel: circle-ci
           template: basic_fail_1
 
   install_nodejs:
