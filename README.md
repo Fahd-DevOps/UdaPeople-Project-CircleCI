@@ -36,7 +36,6 @@ Optional: an API token (to create badges for private projects)
 * [ection 2: Deploying Working, Trustworthy Software](#section-2-deploying-working-trustworthy-software)
 * [Section 3: Turn Errors into Sirens](#section-3-turn-errors-into-sirens)
 * [Files Included](#files-included)
-* [License](#license)
 
 <h3 align="center">UdaPeople</h3>   
 
@@ -104,7 +103,6 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [presentation.pdf](./Presentation.pdf)  
 * [urls.txt](./urls.txt)    
 * [README.md](./README.md)  
-* [LICENSE.md](./LICENSE.md)  
 
 ## License  
 
