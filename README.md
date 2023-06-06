@@ -6,7 +6,7 @@
 [![<ORG_NAME>](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg)](<LINK>)
 
 # Example:
-[![CircleCI](https://circleci.com/gh/Mohamedelfal/udapeople-cicd.svg?style=svg)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd/5)
+[![CircleCI](https://circleci.com/gh/Fahd-DevOps/udapeople-cicd.svg?style=svg)](https://app.circleci.com/pipelines/github/Fahd-DevOps/udapeople-cicd/5)
 
 # Example for specific branch:
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/?branch=teesloane-patch-5)
@@ -21,10 +21,10 @@ Optional: an API token (to create badges for private projects)
 
 # 
 
-[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
+[![CircleCI](https://circleci.com/gh/Fahd-DevOps/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/Fahd-DevOps/udapeople-cicd?branch=master&filter=all)
 <a rel="Udacity" href="./screenshots/passed.md"><img alt="Udacity Project"  src="https://img.shields.io/badge/Udacity-PASSED-brightgre?style=plastic&logo=Udacity" /></a> <a rel="Udacity" href="./2-udacity-passed.jpg">
-[![GitHub language count](https://img.shields.io/github/languages/count/mohamedelfal/udapeople-cicd)](https://github.com/mohamedelfal/udapeople-cicd)
-[![GitHub top language](https://img.shields.io/github/languages/top/mohamedelfal/udapeople-cicd)](https://github.com/mohamedelfal/udapeople-cicd)
+[![GitHub language count](https://img.shields.io/github/languages/count/Fahd-DevOps/udapeople-cicd)](https://github.com/Fahd-DevOps/udapeople-cicd)
+[![GitHub top language](https://img.shields.io/github/languages/top/Fahd-DevOps/udapeople-cicd)](https://github.com/Fahd-DevOps/udapeople-cicd)
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
