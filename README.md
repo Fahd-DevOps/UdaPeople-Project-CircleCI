@@ -21,16 +21,16 @@ Optional: an API token (to create badges for private projects)
 
 # 
 
-[![CircleCI](https://circleci.com/gh/Fahd-DevOps/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/Fahd-DevOps/udapeople-cicd?branch=master&filter=all)
-<a rel="Udacity" href="./screenshots/passed.md"><img alt="Udacity Project"  src="https://img.shields.io/badge/Udacity-PASSED-brightgre?style=plastic&logo=Udacity" /></a> <a rel="Udacity" href="./2-udacity-passed.jpg">
-[![GitHub language count](https://img.shields.io/github/languages/count/Fahd-DevOps/udapeople-cicd)](https://github.com/Fahd-DevOps/udapeople-cicd)
-[![GitHub top language](https://img.shields.io/github/languages/top/Fahd-DevOps/udapeople-cicd)](https://github.com/Fahd-DevOps/udapeople-cicd)
+[![CircleCI](https://img.shields.io/badge/CircleCI-brightgre?style=plastic&logo=CircleCI)](Screenshot/SCREENSHOT10.png)
+<a rel="Udacity" href="./Udacity Nanodegree Graduation Certificate.pdf"><img alt="Udacity Project"  src="https://img.shields.io/badge/Udacity-PASSED-brightgre?style=plastic&logo=Udacity" /></a> <a rel="Udacity" href="./Udacity Nanodegree Graduation Certificate.pdf">
+[![GitHub language count](https://img.shields.io/github/languages/count/Fahd-DevOps/UdaPeople-Project-CircleCI)](https://github.com/Fahd-DevOps/UdaPeople-Project-CircleCI)
+[![GitHub top language](https://img.shields.io/github/languages/top/Fahd-DevOps/UdaPeople-Project-CircleCI)](https://github.com/Fahd-DevOps/UdaPeople-Project-CircleCI)
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
 * [Built With](#built-with)
 * [Section 1: Selling CI/CD to your Team/Organization](#section-1-selling-cicd-to-your-teamorganization)
-* [ection 2: Deploying Working, Trustworthy Software](#section-2-deploying-working-trustworthy-software)
+* [Section 2: Deploying Working, Trustworthy Software](#section-2-deploying-working-trustworthy-software)
 * [Section 3: Turn Errors into Sirens](#section-3-turn-errors-into-sirens)
 * [Files Included](#files-included)
 
@@ -96,7 +96,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [frontend](./frontend)  
 * [util](./util)  
 * [.gitignore](./.gitignore)  
-* [Screenshots](./screenshots/)  
+* [Screenshots](./Screenshot/)  
 * [presentation.pdf](./Presentation.pdf)  
 * [urls.txt](./urls.txt)    
 * [README.md](./README.md)  
