@@ -97,7 +97,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [util](./util)  
 * [.gitignore](./.gitignore)  
 * [Screenshots](./Screenshot/)  
-* [presentation.pdf](./Presentation.pdf)  
+* [Presentation.pdf](./Presentation.pdf)  
 * [urls.txt](./urls.txt)    
 * [README.md](./README.md)  
 
