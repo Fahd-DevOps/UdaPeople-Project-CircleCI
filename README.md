@@ -21,7 +21,7 @@ Optional: an API token (to create badges for private projects)
 
 # 
 
-[![CircleCI](https://img.shields.io/badge/CircleCI-brightgre?style=plastic&logo=CircleCI)](Screenshot/SCREENSHOT10.png)
+[![CircleCI](https://img.shields.io/badge/CircleCI-brightgre?style=plastic&logo=CircleCI)](Screenshot/deploy.pdf)
 <a rel="Udacity" href="./Udacity Nanodegree Graduation Certificate.pdf"><img alt="Udacity Project"  src="https://img.shields.io/badge/Udacity-PASSED-brightgre?style=plastic&logo=Udacity" /></a> <a rel="Udacity" href="./Udacity Nanodegree Graduation Certificate.pdf">
 [![GitHub language count](https://img.shields.io/github/languages/count/Fahd-DevOps/UdaPeople-Project-CircleCI)](https://github.com/Fahd-DevOps/UdaPeople-Project-CircleCI)
 [![GitHub top language](https://img.shields.io/github/languages/top/Fahd-DevOps/UdaPeople-Project-CircleCI)](https://github.com/Fahd-DevOps/UdaPeople-Project-CircleCI)
